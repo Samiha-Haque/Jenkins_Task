@@ -45,9 +45,9 @@ pipeline{
             post{
                 always{
                     emailext{
-                        to : "samihahaque96@gmail.com", 
-                        subject : "Build status email",
-                        body : "Build was successful",
+                        to : 'samihahaque96@gmail.com', 
+                        subject : 'Build status email',
+                        body : 'Build was successful',
                         attachLog : true 
                     }
                 }
