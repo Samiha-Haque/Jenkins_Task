@@ -49,7 +49,7 @@ pipeline{
                             mail to : 'samihahaque96@gmail.com', 
                             subject : 'Build status email',
                             body : 'Build was successful',
-                            attachLog : true 
+                             
                         }
                 }
                 }
