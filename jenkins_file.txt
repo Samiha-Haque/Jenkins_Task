@@ -43,7 +43,7 @@ pipeline{
             
             }
             post{
-                always{
+                success{
                     emailext{
                         to : 'samihahaque96@gmail.com', 
                         subject : 'Build status email',
