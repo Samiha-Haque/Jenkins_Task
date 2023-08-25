@@ -46,7 +46,7 @@ pipeline{
                 always{
                       script{
                         emailext{
-                            mail to : 'samihahaque96@gmail.com', 
+                            to : 'samihahaque96@gmail.com', 
                             subject : 'Build status email',
                             body : 'Build was successful',
                             attachLog : true
