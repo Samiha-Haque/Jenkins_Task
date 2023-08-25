@@ -45,12 +45,12 @@ pipeline{
             post{
                 always{
                       script{
-                        emailext{
+                        emailext(
                             to : 'samihahaque96@gmail.com', 
                             subject : 'Build status email',
                             body : 'Build was successful',
                             attachLog : true
-                        }
+                        )
                 }
                 }
             }
