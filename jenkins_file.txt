@@ -44,12 +44,14 @@ pipeline{
             }
             post{
                 success{
-                    emailext{
-                        to : 'samihahaque96@gmail.com', 
-                        subject : 'Build status email',
-                        body : 'Build was successful',
-                        attachLog : true 
-                    }
+                    script{
+                        emailext{
+                            mail to : 'samihahaque96@gmail.com', 
+                            subject : 'Build status email',
+                            body : 'Build was successful',
+                            attachLog : true 
+                        }
+                }
                 }
             }
         }
