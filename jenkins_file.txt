@@ -40,6 +40,14 @@ pipeline{
         stage('Deploy to Production'){
             steps{
                 echo "deploy the application to production environment $PRODUCTION_ENVIRONMENT"
+            
+            }
+            post{
+                always{
+                    mail to : "samihahaque96@gmail.com"
+                    subject : "Build status email"
+                    body : "Build was successful"
+                }
             }
         }
 
